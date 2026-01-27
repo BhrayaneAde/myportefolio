@@ -1,6 +1,6 @@
 'use client';
 
-import { Code, Server, Smartphone, Database, Wrench } from 'lucide-react';
+import { Code, Server, Smartphone, Database, Settings } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -15,13 +15,13 @@ export default function Skills() {
     {
       icon: Server,
       title: 'Backend',
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-slate-600 to-gray-700',
       skills: ['PHP', 'Laravel', 'FastAPI', 'Node.js', 'Express', 'Python'],
     },
     {
       icon: Smartphone,
       title: 'Mobile',
-      color: 'from-orange-500 to-red-500',
+      color: 'from-indigo-500 to-blue-600',
       skills: ['Flutter', 'React Native', 'Développement Cross-platform'],
     },
     {
@@ -31,9 +31,9 @@ export default function Skills() {
       skills: ['MySQL', 'PostgreSQL', 'MongoDB', 'REST API'],
     },
     {
-      icon: Wrench,
+      icon: Settings,
       title: 'Autres Compétences',
-      color: 'from-amber-500 to-yellow-600',
+      color: 'from-slate-500 to-gray-600',
       skills: ['Git', 'Maintenance Informatique', 'Support Réseau', 'Design UI/UX'],
     },
   ];

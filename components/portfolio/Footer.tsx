@@ -1,6 +1,7 @@
 'use client';
 
 import { Heart, Code2 } from 'lucide-react';
+import Logo from '@/components/ui/Logo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,9 +11,12 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">
-              Bhrayane Freudel YENOU
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <Logo size={50} />
+              <h3 className="text-2xl font-bold">
+                Bhrayane Freudel YENOU
+              </h3>
+            </div>
             <p className="text-slate-300">
               Développeur Fullstack passionné, créateur de solutions numériques
               innovantes et performantes.

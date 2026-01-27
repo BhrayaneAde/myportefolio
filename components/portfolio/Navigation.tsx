@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import Logo from '@/components/ui/Logo';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,9 +44,12 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           <button
             onClick={() => scrollToSection('hero')}
-            className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:opacity-80 transition-opacity"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity group"
           >
-            BFY
+            <Logo size={45} className="group-hover:scale-110 transition-transform duration-300" />
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-slate-600 bg-clip-text text-transparent hidden sm:block">
+              Bhrayane Freudel
+            </span>
           </button>
 
           {/* Desktop Menu */}
@@ -54,7 +58,7 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group hover:bg-primary/5 rounded-full"
+                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-blue-600 transition-colors relative group hover:bg-blue-600/5 rounded-full"
               >
                 {item.label}
               </button>
@@ -64,7 +68,7 @@ export default function Navigation() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 rounded-full hover:bg-primary/10 transition-colors"
+            className="md:hidden p-2 rounded-full hover:bg-blue-600/10 transition-colors"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6 text-foreground" />
@@ -83,7 +87,7 @@ export default function Navigation() {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left px-4 py-3 rounded-xl text-muted-foreground hover:text-primary hover:bg-primary/5 font-medium transition-all"
+                className="block w-full text-left px-4 py-3 rounded-xl text-muted-foreground hover:text-blue-600 hover:bg-blue-600/5 font-medium transition-all"
               >
                 {item.label}
               </button>
