@@ -85,9 +85,9 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+    <section id="experience" className="py-20 px-8 lg:px-16 xl:px-24 bg-white">
+      <div className="w-full">
+        <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Expériences Professionnelles
           </h2>
@@ -97,13 +97,13 @@ export default function Experience() {
           </p>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-6 w-full">
           {experiences.map((exp, index) => (
             <Card
               key={index}
               className="border-2 border-slate-200 hover:border-slate-400 hover:shadow-lg transition-all duration-300 group"
             >
-              <CardContent className="p-6 md:p-8">
+              <CardContent className="p-6 md:p-8 w-full">
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
                   <div className="flex-1">
                     <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2 group-hover:text-slate-700 transition-colors">

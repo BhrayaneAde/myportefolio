@@ -28,11 +28,11 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 px-4 sm:px-6 lg:px-8 relative bg-muted/30">
+    <section id="about" className="py-24 px-8 lg:px-16 xl:px-24 relative bg-muted/30">
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-500/5 rounded-full blur-[100px] pointer-events-none"></div>
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-slate-500/5 rounded-full blur-[100px] pointer-events-none"></div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
+      <div className="w-full relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-3xl sm:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-600 to-slate-600 bg-clip-text text-transparent">À Propos de Moi</span>
@@ -40,8 +40,8 @@ export default function About() {
           <div className="w-24 h-1.5 bg-gradient-to-r from-blue-500 via-slate-500 to-cyan-500 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
-          <div className="space-y-8 animate-in slide-in-from-left duration-700 delay-200">
+        <div className="grid md:grid-cols-2 gap-16 items-center mb-24 w-full justify-between">
+          <div className="space-y-8 animate-in slide-in-from-left duration-700 delay-200 w-full">
             <p className="text-lg text-muted-foreground leading-relaxed">
               Jeune diplômé passionné par le développement informatique, je me spécialise
               dans la création de <span className="font-semibold text-blue-600">solutions web et mobiles</span> innovantes
@@ -60,7 +60,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="relative animate-in slide-in-from-right duration-700 delay-400">
+          <div className="relative animate-in slide-in-from-right duration-700 delay-400 w-full">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-slate-500 to-cyan-500 rounded-3xl transform rotate-3 opacity-20 blur-lg"></div>
             <div className="relative glass-card bg-card/50 p-10 rounded-3xl border border-white/10">
               <h3 className="text-2xl font-bold mb-8 text-foreground">Mes Valeurs</h3>
@@ -81,7 +81,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full justify-items-stretch">
           {highlights.map((item, index) => (
             <Card
               key={index}

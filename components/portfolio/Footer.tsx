@@ -7,10 +7,10 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 text-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div>
+    <footer className="bg-slate-900 text-white py-12 px-8 lg:px-16 xl:px-24">
+      <div className="w-full">
+        <div className="grid md:grid-cols-3 gap-8 mb-8 w-full justify-items-stretch">
+          <div className="w-full">
             <div className="flex items-center gap-3 mb-4">
               <Logo size={50} />
               <h3 className="text-2xl font-bold">
@@ -23,7 +23,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div>
+          <div className="w-full">
             <h4 className="text-lg font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2">
               {['Accueil', 'À Propos', 'Compétences', 'Expériences', 'Éducation', 'Contact'].map((item, index) => (
@@ -42,7 +42,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
+          <div className="w-full">
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-slate-300">
               <li>+229 90 20 54 86</li>

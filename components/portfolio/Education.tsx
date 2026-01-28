@@ -32,9 +32,9 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+    <section id="education" className="py-20 px-8 lg:px-16 xl:px-24 bg-slate-50">
+      <div className="w-full">
+        <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Formation & Éducation
           </h2>
@@ -44,7 +44,7 @@ export default function Education() {
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-8 w-full">
           {education.map((edu, index) => (
             <Card
               key={index}
@@ -87,11 +87,11 @@ export default function Education() {
           ))}
         </div>
 
-        <div className="mt-12 bg-white rounded-2xl shadow-lg p-8 border-2 border-slate-200">
+        <div className="mt-12 bg-white rounded-2xl shadow-lg p-8 border-2 border-slate-200 w-full">
           <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">
             Certifications & Compétences Complémentaires
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full justify-items-stretch">
             <div className="flex items-start gap-3 p-4 rounded-lg bg-slate-50 hover:bg-slate-100 transition-colors">
               <Award className="w-6 h-6 text-slate-700 flex-shrink-0 mt-1" />
               <div>

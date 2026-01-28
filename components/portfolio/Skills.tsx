@@ -39,9 +39,9 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+    <section id="skills" className="py-20 px-8 lg:px-16 xl:px-24 bg-slate-50">
+      <div className="w-full">
+        <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Compétences Techniques
           </h2>
@@ -52,7 +52,7 @@ export default function Skills() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full justify-items-stretch">
           {skillCategories.map((category, index) => (
             <Card
               key={index}
@@ -81,11 +81,11 @@ export default function Skills() {
           ))}
         </div>
 
-        <div className="mt-16 bg-white rounded-2xl shadow-lg p-8 md:p-12 border-2 border-slate-200">
+        <div className="mt-16 bg-white rounded-2xl shadow-lg p-8 md:p-12 border-2 border-slate-200 w-full">
           <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">
             Technologies Maîtrisées
           </h3>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-3 w-full">
             {[
               'HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React', 'Next.js',
               'Vue.js', 'Tailwind CSS', 'PHP', 'Laravel', 'Python', 'FastAPI',

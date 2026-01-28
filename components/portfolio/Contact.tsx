@@ -16,13 +16,31 @@ export default function Contact() {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
-    setTimeout(() => {
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({ name: '', email: '', subject: '', message: '' });
+        }, 3000);
+      } else {
+        throw new Error('Erreur lors de l\'envoi');
+      }
+    } catch (error) {
+      console.error('Erreur:', error);
       setIsSubmitted(false);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 3000);
+    }
   };
 
   const handleChange = (
@@ -37,9 +55,9 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: Phone,
-      label: 'Téléphone',
-      value: '+229 90 20 54 86',
-      link: 'tel:+22990205486',
+      label: 'Téléphone et Contact Whatsapp',
+      value: '+229 01 90 20 54 86',
+      link: 'tel:+2290190205486',
     },
     {
       icon: Mail,
@@ -56,9 +74,9 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+    <section id="contact" className="py-20 px-8 lg:px-16 xl:px-24 bg-white">
+      <div className="w-full">
+        <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4">
             Me Contacter
           </h2>
@@ -69,8 +87,8 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          <div className="lg:col-span-1 space-y-6">
+        <div className="grid lg:grid-cols-3 gap-8 w-full justify-items-stretch">
+          <div className="lg:col-span-1 space-y-6 w-full">
             {contactInfo.map((info, index) => (
               <Card
                 key={index}
@@ -116,7 +134,7 @@ export default function Contact() {
             </Card>
           </div>
 
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 w-full">
             <Card className="border-2 border-slate-200 shadow-lg">
               <CardContent className="p-8">
                 {isSubmitted ? (
